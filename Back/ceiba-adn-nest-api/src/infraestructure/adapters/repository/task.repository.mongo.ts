@@ -30,4 +30,11 @@ export default class TaskRepositoryMongo implements TaskRepository {
     const taskDeleted = await this.taskModel.findByIdAndDelete(taskId);
     return TaskMapper.toDom(taskDeleted);
   }
+
+  public async updateTask(taskId: string, task: Task): Promise<Task> {
+    const taskUpdated = await this.taskModel.findByIdAndUpdate(taskId, task, {
+      new: true,
+    });
+    return TaskMapper.toDom(taskUpdated);
+  }
 }

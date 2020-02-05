@@ -5,6 +5,9 @@ import TaskSchema from 'src/infraestructure/adapters/repository/schema/task.sche
 import { DomainModule } from 'src/domain/domain.module';
 import GetAllTasksUseCase from './useCases/getAllTasks.usecase';
 import CreateTaskUseCase from './useCases/createTask.usecase';
+import DeleteTaskUseCase from './useCases/deleteTask.usecase';
+import GetTaskUseCase from './useCases/getTask.usecase';
+import UpdateTaskUseCase from './useCases/updateTask.usecase';
 
 @Module({
   imports: [
@@ -19,11 +22,20 @@ import CreateTaskUseCase from './useCases/createTask.usecase';
   providers: [
     GetAllTasksUseCase,
     CreateTaskUseCase,
+    DeleteTaskUseCase,
+    GetTaskUseCase,
+    UpdateTaskUseCase,
     {
       provide: 'TaskRepository',
       useClass: TaskRepositoryMongo,
     },
   ],
-  exports: [GetAllTasksUseCase, CreateTaskUseCase],
+  exports: [
+    GetAllTasksUseCase,
+    CreateTaskUseCase,
+    DeleteTaskUseCase,
+    GetTaskUseCase,
+    UpdateTaskUseCase,
+  ],
 })
 export class ApplicationModule {}

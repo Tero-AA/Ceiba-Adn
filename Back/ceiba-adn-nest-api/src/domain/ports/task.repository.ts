@@ -8,4 +8,6 @@ export interface TaskRepository {
   createTask(task: Task): Promise<Task>;
 
   deleteTask(id: string): Promise<Task>;
+
+  updateTask(id: string, task: Task): Promise<Task>;
 }
