@@ -1,13 +1,13 @@
-import Task from '../task';
+import TaskDto from '../dto/task.dto';
 
 export interface TaskRepository {
-  getAllTasks(): Promise<Task[]>;
+  getAllTasks(): Promise<TaskDto[]>;
 
-  getTask(id: string): Promise<Task>;
+  getTask(id: string): Promise<TaskDto>;
 
-  createTask(task: Task): Promise<Task>;
+  createTask(task: TaskDto): Promise<TaskDto>;
 
-  deleteTask(id: string): Promise<Task>;
+  deleteTask(id: string): Promise<TaskDto>;
 
-  updateTask(id: string, task: Task): Promise<Task>;
+  updateTask(id: string, task: TaskDto): Promise<TaskDto>;
 }

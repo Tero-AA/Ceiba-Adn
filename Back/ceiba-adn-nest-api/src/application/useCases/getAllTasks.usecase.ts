@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
-import Task from 'src/domain/task';
 import { TaskRepository } from '../../domain/ports/task.repository';
+import TaskDto from 'src/domain/dto/task.dto';
 
 @Injectable()
 export default class GetAllTasksUseCase {
@@ -8,7 +8,7 @@ export default class GetAllTasksUseCase {
     @Inject('TaskRepository') private taskRepository: TaskRepository
   ) {}
 
-  public handler(): Promise<Task[]> {
+  public handler(): Promise<TaskDto[]> {
     return this.taskRepository.getAllTasks();
   }
 }

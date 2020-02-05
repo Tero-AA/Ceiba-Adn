@@ -1,9 +1,9 @@
-import Task from 'src/domain/task';
 import { TaskEntity } from '../adapters/repository/entity/task.entity';
+import TaskDto from 'src/domain/dto/task.dto';
 
 export default class TaskMapper {
-  public static toDom(taskEntity: TaskEntity): Task {
-    return new Task(
+  public static toDom(taskEntity: TaskEntity): TaskDto {
+    return new TaskDto(
       taskEntity.id,
       taskEntity.taskName,
       taskEntity.taskDescription,
@@ -15,8 +15,8 @@ export default class TaskMapper {
     );
   }
 
-  public static toDoms(taskEntity: TaskEntity[]): Task[] {
-    const tasks = new Array<Task>();
+  public static toDoms(taskEntity: TaskEntity[]): TaskDto[] {
+    const tasks = new Array<TaskDto>();
     taskEntity.forEach(taskEntity => {
       const task = this.toDom(taskEntity);
       tasks.push(task);

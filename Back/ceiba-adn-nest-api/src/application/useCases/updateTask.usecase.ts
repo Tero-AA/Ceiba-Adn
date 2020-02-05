@@ -1,6 +1,6 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { TaskRepository } from 'src/domain/ports/task.repository';
-import Task from 'src/domain/task';
+import TaskDto from 'src/domain/dto/task.dto';
 
 @Injectable()
 export default class UpdateTaskUseCase {
@@ -8,7 +8,7 @@ export default class UpdateTaskUseCase {
     @Inject('TaskRepository') private taskRepository: TaskRepository
   ) {}
 
-  public handler(taskId: string, task: Task): Promise<Task> {
+  public handler(taskId: string, task: TaskDto): Promise<TaskDto> {
     return this.taskRepository.updateTask(taskId, task);
   }
 }
