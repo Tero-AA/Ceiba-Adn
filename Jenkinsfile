@@ -29,7 +29,7 @@ pipeline {
             gitTool: 'Default', 
             submoduleCfg: [], 
             userRemoteConfigs: [[
-            url:'https://github.com/Tero-AA/adn-express-test'
+            url:'https://github.com/Tero-AA/Ceiba-Adn'
             ]]
         ])
       }
