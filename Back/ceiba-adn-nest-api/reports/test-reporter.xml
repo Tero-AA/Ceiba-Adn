@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testExecutions version="1">
+    <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\domain\services\task.service.spec.ts">
+        <testCase name="Task Service Unit Testing getAllTask" duration="16"/>
+        <testCase name="Task Service Unit Testing getTask" duration="3"/>
+        <testCase name="Task Service Unit Testing createTask" duration="3"/>
+        <testCase name="Task Service Unit Testing deleteTask" duration="2"/>
+        <testCase name="Task Service Unit Testing updateTask" duration="3"/>
+    </file>
+</testExecutions>
