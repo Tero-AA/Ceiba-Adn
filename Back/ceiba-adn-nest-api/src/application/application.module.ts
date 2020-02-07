@@ -8,6 +8,9 @@ import CreateTaskUseCase from './useCases/createTask.usecase';
 import DeleteTaskUseCase from './useCases/deleteTask.usecase';
 import GetTaskUseCase from './useCases/getTask.usecase';
 import UpdateTaskUseCase from './useCases/updateTask.usecase';
+import { TaskService } from 'src/domain/services/task.service';
+import { TaskRepository } from '../domain/ports/task.repository';
+
 
 @Module({
   imports: [
@@ -25,6 +28,10 @@ import UpdateTaskUseCase from './useCases/updateTask.usecase';
     DeleteTaskUseCase,
     GetTaskUseCase,
     UpdateTaskUseCase,
+    {
+      provide: 'TaskService',
+      useClass: TaskService,
+    },
     {
       provide: 'TaskRepository',
       useClass: TaskRepositoryMongo,

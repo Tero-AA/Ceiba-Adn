@@ -9,12 +9,12 @@ import {
   Body,
   Param,
 } from '@nestjs/common';
-import GetAllTasksUseCase from 'src/application/useCases/getAllTasks.usecase';
-import CreateTaskUseCase from 'src/application/useCases/createTask.usecase';
-import DeleteTaskUseCase from 'src/application/useCases/deleteTask.usecase';
-import GetTaskUseCase from 'src/application/useCases/getTask.usecase';
-import UpdateTaskUseCase from 'src/application/useCases/updateTask.usecase';
-import TaskDto from 'src/domain/dto/task.dto';
+import GetAllTasksUseCase from '../../application/useCases/getAllTasks.usecase';
+import CreateTaskUseCase from '../../application/useCases/createTask.usecase';
+import DeleteTaskUseCase from '../../application/useCases/deleteTask.usecase';
+import GetTaskUseCase from '../../application/useCases/getTask.usecase';
+import UpdateTaskUseCase from '../../application/useCases/updateTask.usecase';
+import TaskDto from '../../domain/dto/task.dto';
 
 @Controller('tasks')
 export default class TaskController {

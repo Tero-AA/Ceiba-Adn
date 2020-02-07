@@ -8,7 +8,7 @@ export class TaskService {
     @Inject('TaskRepository') private taskRepository: TaskRepository
   ) {}
 
-  getAllTask(): Promise<TaskDto[]> {
+  getAllTasks(): Promise<TaskDto[]> {
     return this.taskRepository.getAllTasks();
   }
 
@@ -27,4 +27,6 @@ export class TaskService {
   updateTask(id: string, task: TaskDto): Promise<TaskDto> {
     return this.taskRepository.updateTask(id, task);
   }
+
+  // Añadir logica de negocio 
 }

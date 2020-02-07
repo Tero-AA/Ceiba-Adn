@@ -1,19 +1,19 @@
 export default class TaskDto {
-  private id: string;
+  id: string;
 
-  private taskName: string;
+  taskName: string;
 
-  private taskDescription: string;
+  taskDescription: string;
 
-  private status: string;
+  status: string;
 
-  private taskDueDate: Date;
+  taskDueDate: Date;
 
-  private taskCreationDate: Date;
+  taskCreationDate: Date;
 
-  private taskCompletionDate: Date;
+  taskCompletionDate: Date;
 
-  private pay: number;
+  pay: number;
 
   constructor(
     id: string,
@@ -35,57 +35,57 @@ export default class TaskDto {
     this.pay = pay;
   }
 
-  //GETTERS
+  // //GETTERS
 
-  public getId(): string {
-    return this.id;
-  }
-  public getTaskName(): string {
-    return this.taskName;
-  }
-  public getTaskDescription(): string {
-    return this.taskDescription;
-  }
-  public getStatus(): string {
-    return this.status;
-  }
-  public getTaskDueDate(): Date {
-    return this.taskDueDate;
-  }
-  public getTaskCreationDate(): Date {
-    return this.taskCreationDate;
-  }
-  public getTaskCompletionDate(): Date {
-    return this.taskCompletionDate;
-  }
-  public getPay(): number {
-    return this.pay;
-  }
+  // public getId(): string {
+  //   return this.id;
+  // }
+  // public getTaskName(): string {
+  //   return this.taskName;
+  // }
+  // public getTaskDescription(): string {
+  //   return this.taskDescription;
+  // }
+  // public getStatus(): string {
+  //   return this.status;
+  // }
+  // public getTaskDueDate(): Date {
+  //   return this.taskDueDate;
+  // }
+  // public getTaskCreationDate(): Date {
+  //   return this.taskCreationDate;
+  // }
+  // public getTaskCompletionDate(): Date {
+  //   return this.taskCompletionDate;
+  // }
+  // public getPay(): number {
+  //   return this.pay;
+  // }
 
-  //SETTERS
+  // //SETTERS
 
-  public setId(): string {
-    return this.id;
-  }
-  public setTaskName(): string {
-    return this.taskName;
-  }
-  public setTaskDescription(): string {
-    return this.taskDescription;
-  }
-  public setStatus(): string {
-    return this.status;
-  }
-  public setTaskDueDate(): Date {
-    return this.taskDueDate;
-  }
-  public setTaskCreationDate(): Date {
-    return this.taskCreationDate;
-  }
-  public setTaskCompletionDate(): Date {
-    return this.taskCompletionDate;
-  }
-  public setPay(): number {
-    return this.pay;
-  }
+  // public setId(): string {
+  //   return this.id;
+  // }
+  // public setTaskName(): string {
+  //   return this.taskName;
+  // }
+  // public setTaskDescription(): string {
+  //   return this.taskDescription;
+  // }
+  // public setStatus(): string {
+  //   return this.status;
+  // }
+  // public setTaskDueDate(): Date {
+  //   return this.taskDueDate;
+  // }
+  // public setTaskCreationDate(): Date {
+  //   return this.taskCreationDate;
+  // }
+  // public setTaskCompletionDate(): Date {
+  //   return this.taskCompletionDate;
+  // }
+  // public setPay(): number {
+  //   return this.pay;
+  // }
 }
