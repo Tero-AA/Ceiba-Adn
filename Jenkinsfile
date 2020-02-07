@@ -38,7 +38,7 @@ pipeline {
     stage('Build') {
       steps {
         echo "------------>Build<------------"
-        dir("Back") {
+        dir("Back/ceiba-adn-nest-api") {
           sh 'npm install' 
         }
       }
@@ -47,8 +47,8 @@ pipeline {
     stage('Unit Tests') {
       steps{
         echo "------------>Unit Tests<------------"
-        dir("Back") {
-          sh 'npm test:cov' 
+        dir("Back/ceiba-adn-nest-api") {
+          sh 'npm run test:cov' 
         }
       }
     }
