@@ -4,9 +4,7 @@ import { TaskService } from '../../domain/services/task.service';
 
 @Injectable()
 export default class DeleteTaskUseCase {
-  constructor(
-    @Inject('TaskService') private taskRepository: TaskService
-  ) {}
+  constructor(@Inject('TaskService') private taskRepository: TaskService) {}
 
   public handler(id: string): Promise<TaskDto> {
     return this.taskRepository.deleteTask(id);

@@ -11,7 +11,6 @@ import UpdateTaskUseCase from './useCases/updateTask.usecase';
 import { TaskService } from 'src/domain/services/task.service';
 import { TaskRepository } from '../domain/ports/task.repository';
 
-
 @Module({
   imports: [
     DomainModule,

@@ -4,9 +4,7 @@ import { TaskService } from '../../domain/services/task.service';
 
 @Injectable()
 export default class CreateTaskUseCase {
-  constructor(
-    @Inject('TaskService') private taskRepository: TaskService
-  ) {}
+  constructor(@Inject('TaskService') private taskRepository: TaskService) {}
 
   public handler(task: TaskDto): Promise<TaskDto> {
     return this.taskRepository.createTask(task);

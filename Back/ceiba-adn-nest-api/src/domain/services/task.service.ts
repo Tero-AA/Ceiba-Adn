@@ -28,5 +28,5 @@ export class TaskService {
     return this.taskRepository.updateTask(id, task);
   }
 
-  // Añadir logica de negocio 
+  // Añadir logica de negocio
 }
