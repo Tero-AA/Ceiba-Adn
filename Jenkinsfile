@@ -48,7 +48,6 @@ pipeline {
       steps{
         echo "------------>Unit Tests<------------"
         dir("Back/ceiba-adn-nest-api") {
-          sh 'sonar-scanner'
           sh 'npm run test:cov' 
         }
       }
