@@ -1,6 +1,6 @@
 import TaskDto from "src/domain/dto/task.dto";
-import { TaskService } from "../../domain/services/task.service";
 import { TestingModule, Test } from "@nestjs/testing";
+import GetTaskUseCase from "./getTask.usecase";
 
 const task: TaskDto = {
   id: "5e39c3384caa9d380437f5cb",
@@ -13,8 +13,8 @@ const task: TaskDto = {
   pay: 18
 }
 
-describe('createTaskUseCase Unit Test', () => {
-  let service: TaskService;
+describe('GetTaskUseCase unit Test', () => {
+  let useCase: GetTaskUseCase;
 
   const eventModel = {
     getTask: jest.fn().mockResolvedValue(task)
@@ -23,18 +23,18 @@ describe('createTaskUseCase Unit Test', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [
-        TaskService,
+        GetTaskUseCase,
         {
-          provide: 'TaskRepository',
+          provide: 'TaskService',
           useValue: eventModel,
         },
       ],
     }).compile();
 
-    service = module.get<TaskService>(TaskService);
+    useCase = module.get<GetTaskUseCase>(GetTaskUseCase);
   });
 
   it('createTask', () => {
-    expect(service.getTask("5e39c3384caa9d380437f5cb")).resolves.toBe(task);
+    expect(useCase.handler("5e39c3384caa9d380437f5cb")).resolves.toBe(task);
   })
 }) 

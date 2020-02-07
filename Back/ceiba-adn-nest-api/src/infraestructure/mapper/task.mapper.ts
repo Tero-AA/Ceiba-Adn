@@ -17,8 +17,8 @@ export default class TaskMapper {
 
   public static toDoms(taskEntity: TaskEntity[]): TaskDto[] {
     const tasks = new Array<TaskDto>();
-    taskEntity.forEach(taskEntity => {
-      const task = this.toDom(taskEntity);
+    taskEntity.forEach(entity => {
+      const task = this.toDom(entity);
       tasks.push(task);
     });
     return tasks;
