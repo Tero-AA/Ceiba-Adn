@@ -44,6 +44,7 @@
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-import": "^2.19.1",
     "jest": "^24.9.0",
+    "jest-sonar-reporter": "^2.0.0",
     "prettier": "1.19.1",
     "supertest": "^4.0.2",
     "ts-jest": "^24.3.0",
@@ -53,6 +54,7 @@
     "typescript": "^3.7.4"
   },
   "jest": {
+    "testResultsProcessor": "jest-sonar-reporter",
     "moduleFileExtensions": [
       "js",
       "json",
