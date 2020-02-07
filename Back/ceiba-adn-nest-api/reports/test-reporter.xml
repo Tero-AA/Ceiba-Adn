@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-    <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\application\useCases\deleteTask.usecase.spec.ts">
-        <testCase name="DeleteTaskUseCase unit Test createTask" duration="19"/>
-    </file>
     <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\application\useCases\getTask.usecase.spec.ts">
-        <testCase name="GetTaskUseCase unit Test createTask" duration="21"/>
+        <testCase name="GetTaskUseCase unit Test createTask" duration="29"/>
+    </file>
+    <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\application\useCases\deleteTask.usecase.spec.ts">
+        <testCase name="DeleteTaskUseCase unit Test createTask" duration="32"/>
     </file>
     <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\domain\services\task.service.spec.ts">
-        <testCase name="Task Service Unit Testing getAllTask" duration="10"/>
-        <testCase name="Task Service Unit Testing getTask" duration="3"/>
-        <testCase name="Task Service Unit Testing createTask" duration="5"/>
-        <testCase name="Task Service Unit Testing deleteTask" duration="6"/>
-        <testCase name="Task Service Unit Testing updateTask" duration="12"/>
+        <testCase name="Task Service Unit Testing getAllTask" duration="11"/>
+        <testCase name="Task Service Unit Testing getTask" duration="7"/>
+        <testCase name="Task Service Unit Testing createTask" duration="6"/>
+        <testCase name="Task Service Unit Testing deleteTask" duration="4"/>
+        <testCase name="Task Service Unit Testing updateTask" duration="11"/>
     </file>
     <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\application\useCases\getAllTasks.usecase.spec.ts">
         <testCase name="GetAllTaskUseCase unit Test createTask" duration="6"/>
     </file>
+    <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\application\useCases\createTask.usecase.spec.ts">
+        <testCase name="CreateTaskUseCase unit Test createTask" duration="4"/>
+    </file>
     <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\application\useCases\updateTask.usecase.spec.ts">
         <testCase name="UpdateTaskUseCase unit Test createTask" duration="4"/>
-    </file>
-    <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\application\useCases\createTask.usecase.spec.ts">
-        <testCase name="CreateTaskUseCase unit Test createTask" duration="7"/>
-    </file>
-    <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\infraestructure\controllers\task.controller.spec.ts">
-        <testCase name="Task Controller should be defined" duration="105"/>
     </file>
 </testExecutions>
