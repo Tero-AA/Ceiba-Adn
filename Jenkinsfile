@@ -48,7 +48,7 @@ pipeline {
       steps{
         echo "------------>Unit Tests<------------"
         dir("Back") {
-          sh 'npm run test:cov' 
+          sh 'jest --coverage' 
         }
       }
     }
