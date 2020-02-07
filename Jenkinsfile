@@ -47,7 +47,7 @@ pipeline {
     stage('Unit Tests') {
       steps{
         echo "------------>Unit Tests<------------"
-        dir("back") {
+        dir("Back") {
           sh 'npm run test:cov' 
         }
       }
