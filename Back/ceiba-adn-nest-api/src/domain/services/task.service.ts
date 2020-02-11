@@ -32,16 +32,19 @@ export class TaskService {
     let onTimePayment = updatedTask.pay;
     let dueDate = moment(updatedTask.taskDueDate);
     let completionDate = moment(updatedTask.taskCompletionDate);
-    let difference = dueDate.diff(completionDate, 'days')
+    let difference = dueDate.diff(completionDate, 'days');
+    let bonus = 1.5;
+    let late = 0.75;
+    let superLate = 0.5;
 
     if (difference === 0) {
       updatedTask.pay = onTimePayment;
     } else if (difference >= 1) {
-      updatedTask.pay = onTimePayment * 1.5;
+      updatedTask.pay = onTimePayment * bonus;
     } else if (difference === -1) {
-      updatedTask.pay = onTimePayment * 0.75;
+      updatedTask.pay = onTimePayment * late;
     } else if (difference <= -2) {
-      updatedTask.pay = onTimePayment * 0.5;
+      updatedTask.pay = onTimePayment * superLate;
     }
 
     return updatedTask;
