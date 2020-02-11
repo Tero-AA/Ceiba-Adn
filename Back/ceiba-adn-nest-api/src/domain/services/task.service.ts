@@ -43,7 +43,7 @@ export class TaskService {
       updatedTask.pay = onTimePayment * bonus;
     } else if (difference === -1) {
       updatedTask.pay = onTimePayment * late;
-    } else if (difference <= -2) {
+    } else if (difference < -1) {
       updatedTask.pay = onTimePayment * superLate;
     }
 
