@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import 'antd/dist/antd.css';
-import { Input, DatePicker, Form } from 'antd';
+import { Input, DatePicker, Form, Button } from 'antd';
+import { postTask } from '../utils/api';
 
+let moment = require('moment');
 const { TextArea } = Input;
 
 function TaskForm() {
@@ -10,20 +12,42 @@ function TaskForm() {
     pay: '',
     taskDescription: '',
   });
-  const [taskDueDate, setTaskDueDate] = useState({ dateString: '2020-02-11' });
+  const [taskDueDate, setTaskDueDate] = useState('2020-02-10');
 
   const handleChange = e => {
     const { name, value } = e.target;
     setValues({ ...values, [name]: value });
   };
 
-  function onChange(dateString) {
-    setTaskDueDate(dateString);
-    console.log(taskDueDate);
-  }
+  const dueDateChange = dateString => {
+    const date = moment(dateString);
+    console.log(date);
+
+    setTaskDueDate(date);
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    let { taskName, pay, taskDescription } = values;
+    let number = Number(pay);
+
+    let data = {
+      taskName: taskName,
+      pay: number,
+      taskDescription: taskDescription,
+      taskDueDate: taskDueDate,
+    };
+
+    postTask(data)
+      .then(res => console.log(res.data))
+      .catch(error => console.log(error, error.message));
+
+    window.location.reload(false);
+  };
 
   return (
-    <Form layout="vertical">
+    <Form onSubmit={handleSubmit} layout="vertical">
       <Form.Item label="Task Name">
         <Input
           name="taskName"
@@ -45,13 +69,16 @@ function TaskForm() {
           rows="3"
           name="taskDescription"
           value={values.taskDescription}
-          placeholder="enter the Task description"
+          placeholder="Enter the Task description"
           onChange={handleChange}
         />
       </Form.Item>
       <Form.Item label="Task Name">
-        <DatePicker onChange={onChange} />
+        <DatePicker onChange={dueDateChange} />
       </Form.Item>
+      <Button onClick={handleSubmit} type="primary">
+        Submit
+      </Button>
     </Form>
   );
 }

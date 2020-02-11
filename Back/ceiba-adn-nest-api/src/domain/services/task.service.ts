@@ -2,6 +2,8 @@ import { Injectable, Inject } from '@nestjs/common';
 import { TaskRepository } from '../ports/task.repository';
 import TaskDto from '../dto/task.dto';
 
+let moment = require('moment');
+
 @Injectable()
 export class TaskService {
   constructor(
@@ -24,9 +26,24 @@ export class TaskService {
     return this.taskRepository.deleteTask(id);
   }
 
-  updateTask(id: string, task: TaskDto): Promise<TaskDto> {
-    return this.taskRepository.updateTask(id, task);
-  }
+  async updateTask(id: string, task: TaskDto): Promise<TaskDto> {
 
-  // Añadir logica de negocio
+    let updatedTask = await this.taskRepository.updateTask(id, task);
+    let onTimePayment = updatedTask.pay;
+    let dueDate = moment(updatedTask.taskDueDate);
+    let completionDate = moment(updatedTask.taskCompletionDate);
+    let difference = dueDate.diff(completionDate, 'days')
+
+    if (difference === 0) {
+      updatedTask.pay = onTimePayment;
+    } else if (difference >= 1) {
+      updatedTask.pay = onTimePayment * 1.5;
+    } else if (difference === -1) {
+      updatedTask.pay = onTimePayment * 0.75;
+    } else if (difference <= -2) {
+      updatedTask.pay = onTimePayment * 0.5;
+    }
+
+    return updatedTask;
+  }
 }

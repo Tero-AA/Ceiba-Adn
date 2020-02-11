@@ -1,18 +1,22 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Card } from 'antd';
+import { Collapse } from 'antd';
 import TaskForm from '../components/TaskForm';
 
-let CardStyle = {
-  maxWidth: '85%',
-  margin: '30px auto',
+const { Panel } = Collapse;
+
+const CardStyle = {
+  maxWidth: '90%',
+  margin: '50px auto',
 };
 
 function TaskFormContainer() {
   return (
-    <Card style={CardStyle}>
-      <TaskForm></TaskForm>
-    </Card>
+    <Collapse style={CardStyle}>
+      <Panel header="Create New Task">
+        <TaskForm></TaskForm>
+      </Panel>
+    </Collapse>
   );
 }
 
