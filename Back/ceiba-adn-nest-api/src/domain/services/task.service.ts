@@ -1,8 +1,7 @@
 import { Injectable, Inject } from '@nestjs/common';
 import { TaskRepository } from '../ports/task.repository';
 import TaskDto from '../dto/task.dto';
-
-let moment = require('moment');
+import * as moment from 'moment';
 
 @Injectable()
 export class TaskService {
