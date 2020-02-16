@@ -2,5 +2,5 @@
   "taskName": "Test task mocked DB",
   "status": "To Do",
   "taskDueDate": "2020-02-20",
-  "pay": 10,
+  "pay": 10
 }
