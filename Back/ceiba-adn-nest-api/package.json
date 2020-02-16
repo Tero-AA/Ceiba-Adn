@@ -15,7 +15,7 @@
     "lint": "eslint '{src,apps,libs,test}/**/*.ts' --fix",
     "test": "set DEBUG=testcontainers && jest --ci --verbose  --detectOpenHandles",
     "test:watch": "DEBUG=testcontainers jest --watch",
-    "test:cov": "DEBUG=testcontainers jest --coverage",
+    "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "DEBUG=testcontainers NODE_ENV=test jest --ci --verbose  --detectOpenHandles --config ./test/jest-e2e.json"
   },
