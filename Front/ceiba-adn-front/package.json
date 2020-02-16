@@ -9,6 +9,7 @@
     "antd": "^3.26.9",
     "axios": "^0.19.2",
     "moment": "^2.24.0",
+    "protractor-react-selector": "^1.0.8",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.1"
@@ -17,6 +18,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "format": "prettier --write \"src/**/*.js\" \"test/**/*.js\"",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -33,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "1.19.1"
   }
 }

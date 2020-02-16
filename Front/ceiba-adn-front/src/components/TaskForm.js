@@ -21,7 +21,6 @@ function TaskForm() {
 
   const dueDateChange = dateString => {
     const date = moment(dateString);
-    console.log(date);
 
     setTaskDueDate(date);
   };
@@ -60,6 +59,7 @@ function TaskForm() {
         <Input
           name="pay"
           value={values.pay}
+          type="number"
           placeholder="Enter the Payment for this Task"
           onChange={handleChange}
         />
@@ -74,9 +74,9 @@ function TaskForm() {
         />
       </Form.Item>
       <Form.Item label="Task Name">
-        <DatePicker onChange={dueDateChange} />
+        <DatePicker name="TaskDueDate" onChange={dueDateChange} />
       </Form.Item>
-      <Button onClick={handleSubmit} type="primary">
+      <Button name="submit" onClick={handleSubmit} type="primary">
         Submit
       </Button>
     </Form>

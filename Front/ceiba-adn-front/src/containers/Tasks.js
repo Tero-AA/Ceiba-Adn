@@ -159,6 +159,7 @@ function Tasks() {
         {loading ? 'loading' : renderTasks()}
       </Card>
       <Modal
+        id="modal"
         title={modalData.taskName}
         visible={visible}
         onOk={handleOk}
