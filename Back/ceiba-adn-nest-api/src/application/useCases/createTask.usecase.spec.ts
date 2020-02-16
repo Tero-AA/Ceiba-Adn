@@ -11,30 +11,30 @@ const task: TaskDto = {
   taskCreationDate: new Date(),
   taskCompletionDate: new Date(),
   pay: 18
-}
+};
 
-describe('CreateTaskUseCase unit Test', () => {
+describe("CreateTaskUseCase unit Test", () => {
   let useCase: CreateTaskUseCase;
 
   const eventModel = {
     createTask: jest.fn().mockResolvedValue(task)
-  }
+  };
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [
         CreateTaskUseCase,
         {
-          provide: 'TaskService',
-          useValue: eventModel,
-        },
-      ],
+          provide: "TaskService",
+          useValue: eventModel
+        }
+      ]
     }).compile();
 
     useCase = module.get<CreateTaskUseCase>(CreateTaskUseCase);
   });
 
-  it('createTask', () => {
+  it("createTask", () => {
     expect(useCase.handler(task)).resolves.toBe(task);
-  })
-}) 
+  });
+});

@@ -1,5 +1,5 @@
-import { TaskEntity } from '../adapters/repository/entity/task.entity';
-import TaskDto from '../../domain/dto/task.dto';
+import { TaskEntity } from "../adapters/repository/entity/task.entity";
+import TaskDto from "../../domain/dto/task.dto";
 
 export default class TaskMapper {
   public static toDom(taskEntity: TaskEntity): TaskDto {

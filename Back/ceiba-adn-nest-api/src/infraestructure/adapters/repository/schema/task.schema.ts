@@ -1,33 +1,33 @@
-import { Schema } from 'mongoose';
+import { Schema } from "mongoose";
 
 const TaskSchema = new Schema({
   taskName: {
     type: String,
-    required: true,
+    required: true
   },
   taskDescription: {
     type: String,
-    default: 'Description',
+    default: "Description"
   },
   status: {
     type: String,
-    default: 'To Do',
+    default: "To Do"
   },
   taskDueDate: {
     type: Date,
-    required: true,
+    required: true
   },
   taskCreationDate: {
     type: Date,
-    default: Date.now,
+    default: Date.now
   },
   taskCompletionDate: {
-    type: Date,
+    type: Date
   },
   pay: {
     type: Number,
-    required: true,
-  },
+    required: true
+  }
 });
 
 export default TaskSchema;

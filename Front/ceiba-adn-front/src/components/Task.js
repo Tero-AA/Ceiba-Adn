@@ -6,7 +6,7 @@ const TaskStyle = {
   marginTop: '10px',
 };
 
-const Task = ({ taskName, id, pay, status }) => {
+const Task = ({ taskName, pay, status }) => {
   return (
     <Card style={TaskStyle} title={taskName} type="inner">
       On time Payment: <Tag color="#87d068">${pay}</Tag>

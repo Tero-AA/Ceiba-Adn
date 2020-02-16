@@ -13,11 +13,11 @@
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint '{src,apps,libs,test}/**/*.ts' --fix",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:cov": "jest --coverage",
+    "test": "set DEBUG=testcontainers && jest --ci --verbose  --detectOpenHandles",
+    "test:watch": "DEBUG=testcontainers jest --watch",
+    "test:cov": "DEBUG=testcontainers jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "DEBUG=testcontainers NODE_ENV=test jest --ci --verbose  --detectOpenHandles --config ./test/jest-e2e.json"
   },
   "dependencies": {
     "@nestjs/common": "^6.10.14",
@@ -25,6 +25,7 @@
     "@nestjs/mongoose": "^6.3.1",
     "@nestjs/platform-express": "^6.10.14",
     "@types/mongoose": "^5.7.0",
+    "dotenv": "^8.2.0",
     "moment": "^2.24.0",
     "mongoose": "^5.8.11",
     "reflect-metadata": "^0.1.13",
@@ -48,6 +49,7 @@
     "jest-sonar-reporter": "^2.0.0",
     "prettier": "1.19.1",
     "supertest": "^4.0.2",
+    "testcontainers": "^2.3.2",
     "ts-jest": "^24.3.0",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.6.0",

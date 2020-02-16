@@ -7,16 +7,16 @@ import {
   Res,
   HttpStatus,
   Body,
-  Param,
-} from '@nestjs/common';
-import GetAllTasksUseCase from '../../application/useCases/getAllTasks.usecase';
-import CreateTaskUseCase from '../../application/useCases/createTask.usecase';
-import DeleteTaskUseCase from '../../application/useCases/deleteTask.usecase';
-import GetTaskUseCase from '../../application/useCases/getTask.usecase';
-import UpdateTaskUseCase from '../../application/useCases/updateTask.usecase';
-import TaskDto from '../../domain/dto/task.dto';
+  Param
+} from "@nestjs/common";
+import GetAllTasksUseCase from "../../application/useCases/getAllTasks.usecase";
+import CreateTaskUseCase from "../../application/useCases/createTask.usecase";
+import DeleteTaskUseCase from "../../application/useCases/deleteTask.usecase";
+import GetTaskUseCase from "../../application/useCases/getTask.usecase";
+import UpdateTaskUseCase from "../../application/useCases/updateTask.usecase";
+import TaskDto from "../../domain/dto/task.dto";
 
-@Controller('tasks')
+@Controller("tasks")
 export default class TaskController {
   constructor(
     private getAllTaskUseCase: GetAllTasksUseCase,
@@ -32,8 +32,8 @@ export default class TaskController {
     return request.status(HttpStatus.OK).json(tasks);
   }
 
-  @Get(':id')
-  public async getTask(@Res() request, @Param('id') id: string): Promise<any> {
+  @Get(":id")
+  public async getTask(@Res() request, @Param("id") id: string): Promise<any> {
     const task = await this.getTaskUseCase.handler(id);
     return request.status(HttpStatus.OK).json(task);
   }
@@ -44,19 +44,19 @@ export default class TaskController {
     return request.status(HttpStatus.CREATED).json(taskCreated);
   }
 
-  @Delete(':id')
+  @Delete(":id")
   public async deleteTask(
     @Res() request,
-    @Param('id') id: string
+    @Param("id") id: string
   ): Promise<any> {
     const task = await this.deleteTaskUseCase.handler(id);
     return request.status(HttpStatus.OK).json(task);
   }
 
-  @Put(':id')
+  @Put(":id")
   public async updateTask(
     @Res() request,
-    @Param('id') id: string,
+    @Param("id") id: string,
     @Body() task: TaskDto
   ): Promise<any> {
     const taskUpdated = await this.updatetaskUseCase.handler(id, task);
