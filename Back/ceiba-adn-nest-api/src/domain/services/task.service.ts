@@ -1,12 +1,12 @@
-import { Injectable, Inject } from "@nestjs/common";
-import { TaskRepository } from "../ports/task.repository";
-import TaskDto from "../dto/task.dto";
-import * as moment from "moment";
+import { Injectable, Inject } from '@nestjs/common';
+import { TaskRepository } from '../ports/task.repository';
+import TaskDto from '../dto/task.dto';
+import * as moment from 'moment';
 
 @Injectable()
 export class TaskService {
   constructor(
-    @Inject("TaskRepository") private taskRepository: TaskRepository
+    @Inject('TaskRepository') private taskRepository: TaskRepository,
   ) {}
 
   // GET ALL TASKS
@@ -35,7 +35,7 @@ export class TaskService {
     let onTimePayment = updatedTask.pay;
     let dueDate = moment(updatedTask.taskDueDate);
     let completionDate = moment(updatedTask.taskCompletionDate);
-    let difference = dueDate.diff(completionDate, "days");
+    let difference = dueDate.diff(completionDate, 'days');
     // PRICE MULTIPLIERS
     let bonus = 1.5;
     let late = 0.75;

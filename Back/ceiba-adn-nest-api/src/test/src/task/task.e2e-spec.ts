@@ -24,7 +24,6 @@ describe('--- CostController (e2e) ---', () => {
     container.stop();
     done();
   });
-  
 
   beforeEach(async done => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
@@ -46,10 +45,8 @@ describe('--- CostController (e2e) ---', () => {
       .send(JSON.parse(rawdata));
 
     expect(response.status).toBe(201);
-    expect(response.body.id).not.toBeNull()
+    expect(response.body.id).not.toBeNull();
     expect(response.body.pay).toBe(10);
     done();
   });
-
-  
 });

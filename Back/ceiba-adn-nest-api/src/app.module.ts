@@ -1,7 +1,7 @@
-import { Module, DynamicModule } from "@nestjs/common";
-import { DomainModule } from "./domain/domain.module";
-import { ApplicationModule } from "./application/application.module";
-import InfrastructureModule from "./infraestructure/infrastructure.module";
+import { Module, DynamicModule } from '@nestjs/common';
+import { DomainModule } from './domain/domain.module';
+import { ApplicationModule } from './application/application.module';
+import InfrastructureModule from './infraestructure/infrastructure.module';
 
 @Module({})
 export default class AppModule {
@@ -11,8 +11,8 @@ export default class AppModule {
       imports: [
         DomainModule,
         ApplicationModule,
-        InfrastructureModule.foorRoot(setting)
-      ]
+        InfrastructureModule.foorRoot(setting),
+      ],
     };
   }
 }

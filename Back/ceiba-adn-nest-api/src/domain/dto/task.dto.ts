@@ -16,7 +16,7 @@ export default class TaskDto {
     taskDueDate: Date,
     taskCreationDate: Date,
     taskCompletionDate: Date,
-    pay: number
+    pay: number,
   ) {
     this.id = id;
     this.taskName = taskName;
