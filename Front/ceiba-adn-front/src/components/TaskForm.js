@@ -73,7 +73,7 @@ function TaskForm() {
           onChange={handleChange}
         />
       </Form.Item>
-      <Form.Item label="Task Name">
+      <Form.Item label="Task Date">
         <DatePicker name="TaskDueDate" onChange={dueDateChange} />
       </Form.Item>
       <Button name="submit" onClick={handleSubmit} type="primary">

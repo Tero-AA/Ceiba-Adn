@@ -1,32 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
     <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\application\useCases\getAllTasks.usecase.spec.ts">
-        <testCase name="GetAllTaskUseCase unit Test createTask" duration="18"/>
+        <testCase name="GetAllTaskUseCase unit Test createTask" duration="29"/>
     </file>
     <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\application\useCases\createTask.usecase.spec.ts">
-        <testCase name="CreateTaskUseCase unit Test createTask" duration="10"/>
+        <testCase name="CreateTaskUseCase unit Test createTask" duration="7"/>
+    </file>
+    <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\application\useCases\getTask.usecase.spec.ts">
+        <testCase name="GetTaskUseCase unit Test createTask" duration="8"/>
+    </file>
+    <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\application\useCases\deleteTask.usecase.spec.ts">
+        <testCase name="DeleteTaskUseCase unit Test createTask" duration="8"/>
+    </file>
+    <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\infraestructure\adapters\repository\task.repository.mongo.spec.ts">
+        <testCase name="Task.repository.mongo should return all the tasks" duration="33"/>
+        <testCase name="Task.repository.mongo should return one task" duration="5"/>
+        <testCase name="Task.repository.mongo should create a task" duration="7"/>
+        <testCase name="Task.repository.mongo should delete task" duration="6"/>
+        <testCase name="Task.repository.mongo should update a task" duration="4"/>
+    </file>
+    <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\application\useCases\updateTask.usecase.spec.ts">
+        <testCase name="UpdateTaskUseCase unit Test createTask" duration="8"/>
     </file>
     <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\domain\services\task.service.spec.ts">
         <testCase name="Task Service Unit Testing getAllTask" duration="4"/>
         <testCase name="Task Service Unit Testing getTask" duration="3"/>
         <testCase name="Task Service Unit Testing createTask" duration="3"/>
-        <testCase name="Task Service Unit Testing deleteTask" duration="3"/>
-        <testCase name="Task Service Unit Testing updateTask" duration="5"/>
+        <testCase name="Task Service Unit Testing deleteTask" duration="2"/>
+        <testCase name="Task Service Unit Testing updateTask" duration="4"/>
     </file>
-    <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\application\useCases\getTask.usecase.spec.ts">
-        <testCase name="GetTaskUseCase unit Test createTask" duration="4"/>
-    </file>
-    <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\infraestructure\adapters\repository\task.repository.mongo.spec.ts">
-        <testCase name="Task.repository.mongo should return all the tasks" duration="27"/>
-        <testCase name="Task.repository.mongo should return one task" duration="6"/>
-        <testCase name="Task.repository.mongo should create a task" duration="4"/>
-        <testCase name="Task.repository.mongo should delete task" duration="3"/>
-        <testCase name="Task.repository.mongo should update a task" duration="3"/>
-    </file>
-    <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\application\useCases\deleteTask.usecase.spec.ts">
-        <testCase name="DeleteTaskUseCase unit Test createTask" duration="5"/>
-    </file>
-    <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\application\useCases\updateTask.usecase.spec.ts">
-        <testCase name="UpdateTaskUseCase unit Test createTask" duration="4"/>
+    <file path="C:\Users\andres.ayala\Documents\Ceiba\Ceiba-Adn\Back\ceiba-adn-nest-api\src\test\src\task\task.e2e-spec.ts">
+        <testCase name="--- CostController (e2e) --- / (Post)" duration="801"/>
     </file>
 </testExecutions>

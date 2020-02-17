@@ -1,29 +1,23 @@
 import axios from 'axios';
 
+const url = 'http://localhost:5000/tasks/';
+
 export function getTasks() {
-  return axios.get('http://localhost:5000/tasks');
+  return axios.get(url);
 }
 
 export function getTask(id) {
-  return axios.get(`http://localhost:5000/tasks/${id}`);
+  return axios.get(url + id);
 }
 
 export function postTask(data) {
-  return axios({
-    method: 'post',
-    url: 'http://localhost:5000/tasks/',
-    data: data,
-  });
+  return axios.post(url, data);
 }
 
 export function deleteTask(id) {
-  return axios.delete(`http://localhost:5000/tasks/${id}`);
+  return axios.delete(url + id);
 }
 
 export function completeTask(id, data) {
-  return axios({
-    method: 'put',
-    url: `http://localhost:5000/tasks/${id}`,
-    data: data,
-  });
+  return axios.put(url + id, data);
 }

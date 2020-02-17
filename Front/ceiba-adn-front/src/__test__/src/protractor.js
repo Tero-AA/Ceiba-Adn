@@ -64,5 +64,4 @@ describe('Protractor tests', () => {
 
     expect(taskDescription.getAttribute('value')).toEqual('Test Description');
   });
-
 });
